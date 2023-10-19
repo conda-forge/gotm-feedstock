@@ -1,6 +1,6 @@
 {% set version = "6.0.6" %}
 {% set fabm_version = "2.0.0" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: gotm
@@ -22,19 +22,9 @@ build:
 requirements:
   build:
     - cmake
-    - {{ compiler('fortran') }}  # [unix]
-    - make  # [unix]
-
-    # netcdf-fortran gets its Fortran compiler on Windows with
-    # compiler('m2w64_fortran') but that does not seem to work for us
-    # Error: Unsatisfiable dependencies ... ['m2w64_fortran_win-64']
-    #- {{ compiler('m2w64_fortran') }}  # [win]
-    - m2w64-gcc-fortran  # [win]
-
-    # netcdf-fortran uses m2-make, but that does not result in a make
-    # program that CMake's MinGW generator recognizes
-    #- m2-make  # [win]
-    - m2w64-make  # [win]
+    - {{ compiler('fortran') }}        # [unix]
+    - make                             # [unix]
+    - {{ compiler('m2w64_fortran') }}  # [win]
   host:
     - netcdf-fortran
   run:
