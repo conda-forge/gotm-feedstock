@@ -15,6 +15,7 @@ source:
     folder: fabm
     patches:
       - ersem.patch
+      - ogs.patch
 
 build:
   number: {{ build }}
