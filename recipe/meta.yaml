@@ -1,5 +1,5 @@
 {% set version = "6.0.7" %}
-{% set fabm_version = "2.0.0" %}
+{% set fabm_version = "2.1.0" %}
 {% set build = 0 %}
 
 package:
@@ -11,7 +11,7 @@ source:
     sha256: e0e22e1d461215f4ce0ca827c6545ba4a89d1869727442e06602f0d9b76cda55
     folder: gotm
   - url: https://github.com/fabm-model/fabm/releases/download/v{{ fabm_version }}/code.tar.gz
-    sha256: 30bbe419d3ef84042f626c7830c8e82d7fee346ca1e374cb30b48716adabffc6
+    sha256: a2b551669acfcff4018e9d8b19d83100c26aac12dba3699d0976448ccdfc0717
     folder: fabm
     patches:
       - ersem.patch
