@@ -1,6 +1,6 @@
 {% set version = "6.0.7" %}
 {% set fabm_version = "2.1.1" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: gotm
@@ -23,14 +23,15 @@ build:
 requirements:
   build:
     - cmake
-    - {{ compiler('fortran') }}        # [unix]
     - make                             # [unix]
+    - {{ compiler('fortran') }}        # [unix]
+    - {{ stdlib("c") }}                # [unix]
     - {{ compiler('m2w64_fortran') }}  # [win]
-    - {{ stdlib("c") }}    # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
   host:
     - netcdf-fortran
   run:
-    - m2w64-gcc-libgfortran  # [win]
+    - m2w64-gcc-libgfortran            # [win]
 
 test:
   commands:
