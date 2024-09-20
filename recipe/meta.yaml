@@ -28,6 +28,7 @@ requirements:
     - {{ stdlib("c") }}                # [unix]
     - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ stdlib("m2w64_c") }}          # [win]
+    - make                             # [win]
   host:
     - netcdf-fortran
   run:
