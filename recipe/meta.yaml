@@ -1,6 +1,6 @@
 {% set version = "6.0.7" %}
 {% set fabm_version = "2.1.2" %}
-{% set build = 1 %}
+{% set build = 2 %}
 
 package:
   name: gotm
@@ -13,9 +13,9 @@ source:
   - url: https://github.com/fabm-model/fabm/releases/download/v{{ fabm_version }}/code.tar.gz
     sha256: 16ca4cfe6247a2a45e040a68939995002dcc007a37dcb44d0f2484075d95e868
     folder: fabm
-    patches:
-      - ersem.patch
-      - ogs.patch
+    #patches:
+    #  - ersem.patch
+    #  - ogs.patch
 
 build:
   number: {{ build }}
@@ -23,7 +23,7 @@ build:
 requirements:
   build:
     - cmake
-    - make                             # [unix]
+    - make
     - {{ compiler('fortran') }}        # [unix]
     - {{ stdlib("c") }}                # [unix]
     - {{ compiler('m2w64_fortran') }}  # [win]
@@ -31,7 +31,7 @@ requirements:
   host:
     - netcdf-fortran
   run:
-    - m2w64-gcc-libgfortran            # [win]
+    #- m2w64-gcc-libgfortran            # [win]
 
 test:
   commands:
