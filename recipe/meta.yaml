@@ -31,7 +31,7 @@ requirements:
   host:
     - netcdf-fortran
   run:
-    - m2w64-gcc-libgfortran            # [win]
+    #- m2w64-gcc-libgfortran            # [win]
 
 test:
   commands:
