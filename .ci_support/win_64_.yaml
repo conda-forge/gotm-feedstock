@@ -9,7 +9,7 @@ m2w64_c_stdlib_version:
 m2w64_fortran_compiler:
 - gfortran
 m2w64_fortran_compiler_version:
-- '13'
+- '14'
 netcdf_fortran:
 - '4.6'
 target_platform:
