@@ -1,6 +1,6 @@
-{% set version = "6.0.7" %}
+{% set version = "6.0.8" %}
 {% set fabm_version = "2.1.2" %}
-{% set build = 2 %}
+{% set build = 0 %}
 
 package:
   name: gotm
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://github.com/gotm-model/code/releases/download/v{{ version }}/code.tar.gz
-    sha256: e0e22e1d461215f4ce0ca827c6545ba4a89d1869727442e06602f0d9b76cda55
+    sha256: 80e2496e227939a8b4634ef348eae3ae5ea83d1502a8804c034f3ce934fd94fb
     folder: gotm
   - url: https://github.com/fabm-model/fabm/releases/download/v{{ fabm_version }}/code.tar.gz
     sha256: 16ca4cfe6247a2a45e040a68939995002dcc007a37dcb44d0f2484075d95e868
